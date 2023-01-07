@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -297,7 +297,6 @@
 				TargetAttributes = {
 					7E7BA5EE1B89DA5200C73DA0 = {
 						CreatedOnToolsVersion = 6.4;
-						DevelopmentTeam = 56U9FMKHJR;
 						SystemCapabilities = {
 							com.apple.Sandbox = {
 								enabled = 1;
@@ -311,10 +310,16 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
 			mainGroup = 7E7BA5E61B89DA5200C73DA0;
+			packageReferences = (
+				32CC632529697A9100FE6C78 /* XCRemoteSwiftPackageReference "SwiftHTTP" */,
+				32CC632629697AEF00FE6C78 /* XCRemoteSwiftPackageReference "CocoaAsyncSocket" */,
+				32CC632729697B1500FE6C78 /* XCRemoteSwiftPackageReference "Reachability" */,
+			);
 			productRefGroup = 7E7BA5F01B89DA5200C73DA0 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -457,18 +462,23 @@
 		7E7BA60C1B89DA5200C73DA0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = "LiveFlight/LiveFlight Connect.entitlements";
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = 56U9FMKHJR;
+				DEVELOPMENT_TEAM = JCH5W6VSL6;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/LiveFlight",
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/LiveFlight/Resources/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				PRODUCT_BUNDLE_IDENTIFIER = com.liveflight.connect.mac;
 				PRODUCT_NAME = "LiveFlight Connect";
@@ -482,18 +492,23 @@
 		7E7BA60D1B89DA5200C73DA0 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = "LiveFlight/LiveFlight Connect.entitlements";
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = 56U9FMKHJR;
+				DEVELOPMENT_TEAM = JCH5W6VSL6;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/LiveFlight",
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/LiveFlight/Resources/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				PRODUCT_BUNDLE_IDENTIFIER = com.liveflight.connect.mac;
 				PRODUCT_NAME = "LiveFlight Connect";
@@ -525,6 +540,33 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		32CC632529697A9100FE6C78 /* XCRemoteSwiftPackageReference "SwiftHTTP" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/daltoniam/SwiftHTTP";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
+		32CC632629697AEF00FE6C78 /* XCRemoteSwiftPackageReference "CocoaAsyncSocket" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/robbiehanson/CocoaAsyncSocket";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
+		32CC632729697B1500FE6C78 /* XCRemoteSwiftPackageReference "Reachability" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ashleymills/Reachability.swift";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
 	};
 	rootObject = 7E7BA5E71B89DA5200C73DA0 /* Project object */;
 }
